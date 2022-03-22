@@ -1,0 +1,141 @@
+html {
+  position: relative;
+  min-height: 100%;
+  font-family: Verdana, Geneva, sans-serif;
+}
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 18px;
+  line-height: 24px;
+  color: #333333;
+}
+a:hover{
+  text-decoration: none;
+}
+p{
+  font-size: 18px;
+  line-height: 24px;
+}
+h1{
+  color: #3E8EDE;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 48px;
+}
+header{
+  background-color: #3E8EDE;
+}
+header .navbar{
+  padding: 1.7rem 1rem;
+}
+.navbar-brand img{
+  width: 166px;
+  height: auto;
+
+}
+.pub .pub-title{
+  font-size: 24px;
+  line-height: 14px;
+}
+
+.form-check {
+  position: relative;
+  padding: 0 6px;
+  margin: 10px 0 0;
+   margin-left: 5px;
+}
+
+.form-check input[type='radio'] {
+  display: none;
+}
+
+
+.form-check label:before {
+  content: " ";
+  display: inline-block;
+  position: relative;
+  top: 5px;
+  margin: 0 5px 0 0;
+  width: 20px;
+  height: 20px;
+  border-radius: 11px;
+  border: 2px solid #3E8EDE;
+  background-color: transparent;
+}
+
+.form-check input[type=radio]:checked + label:after {
+  border-radius: 11px;
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  top: 10px;
+  left: 11px;
+  content: " ";
+  display: block;
+  background: #3E8EDE;
+}
+input[type="radio"]:checked+label{ 
+  color: #3E8EDE;
+} 
+
+.footer {
+  width: 100%;
+  height: 60px;
+  line-height: 60px; /* Vertically center the text there */
+  background-color: #FFFFFF;
+  font-size: 16px;
+}
+.footer-branded{
+  background-color: #3E8EDE;
+  color: #FFF;
+  font-size: 16px;
+}
+.btn-lg{
+  background: transparent;
+  border: 2px solid #3E8EDE;
+  border-radius: 0;
+  color: #3E8EDE;
+  padding: 0.7rem 1.5rem;
+}
+.btn-lg:hover{
+  opacity: 0.7;
+  background: transparent;
+  color: #3E8EDE;
+  border: 2px solid #3E8EDE;
+}
+
+
+
+@media (max-width: 768px){
+  p{
+    font-size: 16px;
+    line-height: 24px;
+  }
+  header .navbar{
+    padding: .3rem 1rem;
+  }
+  h1{
+    font-size: 22px;
+    line-height: 32px;
+  }
+  .pub .pub-title{
+    font-size: 16px;
+    line-height: 20px;
+  }
+  .pub .pub-desc{
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .pub label{
+    font-size: 14px;
+    line-height: 17px;
+  }
+  .btn-lg{
+    font-size: 16px;
+  }
+
+  .footer-branded{
+    text-align: center;
+    font-size: 12px;
+  }
+}
