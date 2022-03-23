@@ -5,51 +5,109 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <title>Tufts University</title>
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="styles/bulma-collapsible.min.css">
     <!-- Custom styles for this template -->
     <link href="styles/main.css" rel="stylesheet">
   </head>
-  <body>
-    <wrapper class="d-flex flex-column">
-      <header>
-        <nav class="navbar navbar-expand-md">
-          <a class="navbar-brand mx-auto" href="#"><img src="images/Tufts-white.png" alt="Tufts Logo"></a>
-        </nav>
+  <body class="is-fullheight-100vh">
+    <div class="wrapper">
+      <header class="column">
+        <img src="https://image.e.tufts.edu/lib/fe8f1372756d067571/m/1/3a59ab11-2163-4246-9ae8-10a6b9ad8772.png" alt="Tufts Logo">
       </header>
       <!-- Begin page content -->
-      <main role="main" class="container flex-fill" id="manage-prefs">
-        <h1 class="mt-5">Please select which emails are most relevant to you</h1>
-        
-        <form>
-
-          <button type="submit" class="btn btn-primary btn-lg mt-4">Update my preferences</button>
-        </form>
-        <p class="mt-3"><a href="#" style="text-decoration:underline;">Update ALL Cummings email preferences</a></p>
-      </main>
-
-      <main role="main" class="container flex-fill" style="display:none;" id="saved-prefs">
-        <h1 class="mt-5">Your preferences have been saved.</h1>
-        <p><span style="color:#3E8EDE;">email@example.com</span> is currently <b>unsubscribed</b> to</span>.<br></p>
-        <ul>
-            <li>Announcements - Cummings School of Veterinary Medicine</li>
-        </ul>
-      </main>
-
-      <footer class="footer footer-branded">
+      <main role="main" id="manage-prefs">
         <div class="container">
-          <span class="align-middle">&copy; Tufts University 2022</span>
+          <div class="columns">
+            <div class="column">
+              <h1 class="mt-5 mb-2">Please select which emails are most relevant to you</h1>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column is-half">
+              <div id="accordion" class="bulma-accordion">
+                <article class="message">
+                  <a href="#cummings-school-veterinary-medicine" data-action="collapse">
+                    <div class="message-header level">
+                      <span class="level-left">Cummings School of Veterinary Medicine</span>
+                      <img src="images/carat-down.svg">
+                    </div>
+                  </a>
+                  <div id="cummings-school-veterinary-medicine" class="message-body is-collapsible" data-parent="accordion" data-allow-multiple="true">
+                    <div class="message-body-content">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </div>
+                  </div>
+                </article>
+                <article class="message">
+                  <div class="message-header">
+                    <p>Question 2 <a href="#collapsible-message-accordion-2" data-action="collapse">Collapse/Expand</a></p>
+                  </div>
+                  <div id="collapsible-message-accordion-2" class="message-body is-collapsible" data-parent="accordion" data-allow-multiple="true">
+                    <div class="message-body-content">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis
+                      placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
+                      <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et
+                      sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et
+                      sem eget, facilisis sodales sem.
+                    </div>
+                  </div>
+                </article>
+                <article class="message">
+                  <div class="message-header">
+                    <p>Question 3 <a href="#collapsible-message-accordion-3" data-action="collapse">Collapse/Expand</a></p>
+                  </div>
+                  <div id="collapsible-message-accordion-3" class="message-body is-collapsible" data-parent="accordion" data-allow-multiple="true">
+                    <div class="message-body-content">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit. <strong>Pellentesque risus mi</strong>, tempus quis
+                      placerat ut, porta nec nulla. Vestibulum rhoncus ac ex sit amet fringilla. Nullam gravida purus diam, et dictum
+                      <a>felis venenatis</a> efficitur. Aenean ac <em>eleifend lacus</em>, in mollis lectus. Donec sodales, arcu et
+                      sollicitudin porttitor, tortor urna tempor ligula, id porttitor mi magna a neque. Donec dui urna, vehicula et
+                      sem eget, facilisis sodales sem.
+                    </div>
+                  </div>
+                </article>
+              </div>
+              <p class="mt-3"><a href="#" style="text-decoration:underline;">I'd like to unsubscribe from ALL Tufts emails</a></p>
+            </div>
+          </div>
         </div>
-      </footer>
-    </wrapper>
+      </main>
+      <main role="main" id="saved-prefs" style="display:none;">
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <h1 class="mt-5 mb-2">Your preferences have been saved.</h1>
+              <p class="mb-4"><span style="color:#3E8EDE;">email@example.com</span> is currently <b>unsubscribed</b> to</span></p>
+              <ul>
+                <li>Announcements - Cummings School of Veterinary Medicine</li>
+              </ul>
+              <section>
+                <h2>Want to review and update more email preferences from [Full Unit Name]?</h2>
+                <button type="submit" class="button mt-3">Yes, take me there</button>
+                <p class="mt-3"><a href="#" style="text-decoration:underline;">I'd like to update ALL Tufts email preferences</a></p>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+    </div>
+    <footer class="footer footer-branded">
+      <div class="container">
+        <p class="has-text-center-mobile">&copy; Tufts University 2022</p>
+      </div>
+    </footer>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="scripts/bulma-collapsible.min.js"></script>
     <script type="text/javascript">
-      $('form button[type="submit"]').click(function(e) {
-
+      bulmaCollapsible.attach();
+      $("form button").click(function(e) {
+      
         //Prevent default form submission functionality for demo purposes
         e.preventDefault();
         $('#manage-prefs').hide();
         $('#saved-prefs').show();
-
+      
       });
     </script>
   </body>

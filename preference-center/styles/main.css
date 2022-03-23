@@ -15,17 +15,52 @@ body {
   overflow-x: hidden;
 }
 
+/*
+  Page Layout
+*/
 
-.wrapper{
+
+.wrapper {
   flex: 1;
 }
 
-main{
+header {
+  background-color: #3E8EDE;
+  padding: 1.7rem 1rem;
+  text-align: center;
+}
+
+header img {
+  width: 166px;
+  height: auto;
+}
+
+main {
   padding-top: 40px;
 }
 
-a,
-a:hover {
+#saved-prefs section {
+  margin-top: 70px;
+}
+
+.footer {
+  width: 100%;
+  background-color: #FFFFFF;
+  font-size: 16px;
+}
+
+.footer-branded {
+  background-color: #3E8EDE;
+  color: #FFF;
+  font-size: 16px;
+  padding: 50px 0;
+}
+
+/*
+  Font Styles
+*/
+
+a, a:hover {
   color: #3E8EDE;
 }
 
@@ -45,26 +80,22 @@ h1 {
   line-height: 48px;
 }
 
-h2{
+h2 {
   font-size: 28px;
-  line-height: 36px;
+  line-height: 40px;
   color: #3E8EDE;
 }
 
-header {
-  background-color: #3E8EDE;
-  padding: 1.7rem 1rem;
-  text-align: center;
-}
+/*
+  Unordered
+  lists
+*/
 
-header img {
-  width: 166px;
-  height: auto;
-}
-ul{
+ul {
   padding-inline-start: 20px;
   list-style-type: disc;
 }
+
 ul.pub-list {
   padding: 0;
   margin: 0;
@@ -76,7 +107,7 @@ ul.pub-list {
   list-style-type: none;
 }
 
-ul.pub-list li{
+ul.pub-list li {
   margin: 0 0 20px 0;
 }
 
@@ -87,9 +118,14 @@ ul.pub-list li{
   margin-bottom: 10px;
 }
 
-.pub-list p{
+.pub-list p {
   margin-bottom: 20px;
 }
+
+/*
+  Form 
+  elements
+*/
 
 .form-check {
   position: relative;
@@ -101,9 +137,11 @@ ul.pub-list li{
 .form-check input[type='radio'] {
   display: none;
 }
-.form-check label{
+
+.form-check label {
   margin-bottom: 0;
 }
+
 .form-check label:before {
   content: " ";
   display: inline-block;
@@ -133,12 +171,6 @@ input[type="radio"]:checked+label {
   color: #3E8EDE;
 }
 
-.footer {
-  width: 100%;
-  background-color: #FFFFFF;
-  font-size: 16px;
-}
-
 .button {
   background: transparent;
   border: 2px solid #3E8EDE;
@@ -157,59 +189,105 @@ input[type="radio"]:checked+label {
   border: 2px solid #3E8EDE;
 }
 
-#saved-prefs section{
-  margin-top:70px;
+/*
+  Bulma
+  Accordion
+*/
+.bulma-accordion .message{
+  background-color: transparent;
+  border-radius: 0;
+  font-size: 16px;
+  border-bottom: 1px solid #CCCCCC;
+
+}
+.bulma-accordion .message-header{
+  background-color: transparent;
+  border-radius: 0;
+  color: #333333;
+  font-weight: normal;
 }
 
-.footer-branded {
-  background-color: #3E8EDE;
-  color: #FFF;
-  font-size: 16px;
-  padding: 50px 0;
+.bulma-accordion .message-body{
+  border-radius: 0;
+  border: 0;
+}
+.bulma-accordion a{
+  text-decoration: none;
+}
+.bulma-accordion a:hover{
+  opacity: initial;
+}
+
+
+.bulma-accordion .message a:not(.button):not(.tag):not(.dropdown-item) {
+    text-decoration: none;
+}
+
+.bulma-accordion .level img{
+  transform: rotate(180deg);
+}
+.bulma-accordion .message .is-active .level img{
+  transform: initial;
 }
 
 @media (max-width: 768px) {
-  main{
-    padding: 20px;
-  }
-  p {
+  body{
     font-size: 16px;
     line-height: 24px;
   }
+  main {
+    padding: 20px;
+  }
+
   header {
     padding: .3rem 1rem;
   }
-  h1 {
-    font-size: 22px;
-    line-height: 32px;
 
+  #saved-prefs section {
+    margin-top: 50px;
   }
-  h2{
-    font-size: 18px;
-    line-height: 26px;
-  }
-  .pub-list .pub-title {
-    font-size: 16px;
-    line-height: 20px;
-  }
-  .pub-list .pub-desc {
-    font-size: 14px;
-    line-height: 18px;
-  }
-  .pub-list label {
-    font-size: 14px;
-    line-height: 17px;
-  }
-  .button {
-    font-size: 16px;
-    height: 2em;
-  }
-  #saved-prefs section{
-    margin-top:50px;
-  }
+
   .footer-branded {
     text-align: center;
     font-size: 12px;
     padding: 30px 0;
   }
+
+  p {
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  h1 {
+    font-size: 22px;
+    line-height: 32px;
+  }
+
+  h2 {
+    font-size: 18px;
+    line-height: 26px;
+  }
+  .button {
+    font-size: 16px;
+    height: 2em;
+  }
+
+  .pub-list .pub-title {
+    font-size: 16px;
+    line-height: 20px;
+  }
+
+  .pub-list p {
+    font-size: 14px;
+    line-height: 18px;
+  }
+
+  .pub-list label {
+    font-size: 14px;
+    line-height: 17px;
+  }
+
+  .bulma-accordion .message-header .level-left{
+  width: 60%;
+}
 }
