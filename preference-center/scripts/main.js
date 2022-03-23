@@ -1,4 +1,4 @@
-var list = [
+var pub_list = [
  {
   "Unit": "Cummings School of Veterinary Medicine",
   "Category": "Events",
@@ -527,9 +527,7 @@ new Vue({
   el: '#app',
   data: {
     subscriber: 'email@example.com',
-    form: {
-      EmailAddress: this.subscriber
-    }
+    pub_list: pub_list
   },
   mounted () {
     this.getData();
@@ -537,7 +535,7 @@ new Vue({
   },
   methods:{
     getData(){      
-      console.log('data!')
+      
         
     }   
   },
