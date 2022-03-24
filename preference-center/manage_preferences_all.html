@@ -29,11 +29,15 @@
             <div class="columns">
               <div class="column">
                 <h1 class="mt-5 mb-2">Please select which emails are most relevant to you</h1>
+                <p class="mt-4 tags">
+                  Sort by <a href="#" id="unit"><span class="tag is-large selected">Unit</span></a> 
+                  <a href="#" id="category"><span class="tag is-large">Category</span></a>
+                </p>
               </div>
             </div>
             <div class="columns">
               <div class="column is-half">
-                <div id="accordion" class="bulma-accordion">
+                <div id="accordion_unit" class="bulma-accordion">
                   <article class="message">
                     <a href="#cummings-school-veterinary-medicine" data-action="collapse">
                       <div class="message-header level">
@@ -41,7 +45,7 @@
                         <img src="images/carat-down.svg">
                       </div>
                     </a>
-                    <div id="cummings-school-veterinary-medicine" class="message-body is-collapsible" data-parent="accordion">
+                    <div id="cummings-school-veterinary-medicine" class="message-body is-collapsible" data-parent="accordion_unit">
                       <div class="message-body-content">
                         <ul class="pub-list">
                           <li>
@@ -150,7 +154,7 @@
                         <img src="images/carat-down.svg">
                       </div>
                     </a>
-                    <div id="friedman-school-nutrition-science" class="message-body is-collapsible" data-parent="accordion">
+                    <div id="friedman-school-nutrition-science" class="message-body is-collapsible" data-parent="accordion_unit">
                       <div class="message-body-content">
                         <ul class="pub-list">
                           <li>
@@ -275,7 +279,7 @@
                         <img src="images/carat-down.svg">
                       </div>
                     </a>
-                    <div id="graduate-school-biomedical-sciences" class="message-body is-collapsible" data-parent="accordion">
+                    <div id="graduate-school-biomedical-sciences" class="message-body is-collapsible" data-parent="accordion_unit">
                       <div class="message-body-content">
                         <ul class="pub-list">
                           <li>
@@ -400,7 +404,7 @@
                         <img src="images/carat-down.svg">
                       </div>
                     </a>
-                    <div id="institute-global-leadership" class="message-body is-collapsible" data-parent="accordion">
+                    <div id="institute-global-leadership" class="message-body is-collapsible" data-parent="accordion_unit">
                       <div class="message-body-content">
                         <ul class="pub-list">
                           <li>
@@ -455,6 +459,118 @@
                     </div>
                   </article>
                 </div>
+                <div id="accordion_category" class="bulma-accordion" style="display:none;">
+                  <article class="message">
+                    <a href="#cummings-school-veterinary-medicine" data-action="collapse">
+                      <div class="message-header level">
+                        <span class="level-left">Cummings School of Veterinary Medicine</span>
+                        <img src="images/carat-down.svg">
+                      </div>
+                    </a>
+                    <div id="cummings-school-veterinary-medicine" class="message-body is-collapsible" data-parent="accordion_category">
+                      <div class="message-body-content">
+                        <ul class="pub-list">
+                          <li>
+                            <p class="pub-title">Special Announcements</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-announcements" id="cummings-announcements-sub" value="sub" checked>
+                              <label for="cummings-announcements-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-announcements" id="cummings-announcements-unsub" value="unsub">
+                              <label for="cummings-announcements-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Newsletters</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-newsletters" id="cummings-newsletters-sub" value="sub">
+                              <label for="cummings-newsletters-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-newsletters" id="cummings-newsletters-unsub" value="unsub">
+                              <label for="cummings-newsletters-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Gratitude</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-gratitude" id="cummings-gratitude-sub" value="sub">
+                              <label for="cummings-gratitude-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-gratitude" id="cummings-gratitude-unsub" value="unsub" checked>
+                              <label for="cummings-gratitude-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Giving Opportunities</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-giving" id="cummings-giving-sub" value="sub" checked>
+                              <label for="cummings-giving-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-giving" id="cummings-giving-unsub" value="unsub">
+                              <label for="cummings-giving-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Events</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-events" id="cummings-events-sub" value="sub" checked>
+                              <label for="cummings-events-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-events" id="cummings-events-unsub" value="unsub">
+                              <label for="cummings-events-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Set mailing preferences from ALL [unit] emails</p>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-all" id="cummings-all-sub" value="sub">
+                              <label for="cummings-all-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-all" id="cummings-all-unsub" value="unsub">
+                              <label for="cummings-all-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+
+                </div>
               </div>
             </div>
           </div>
@@ -494,8 +610,7 @@
                 </div>
             </div>
         </section>
-
-      </form>
+   </form>
 
     </div><!-- // Wrapper -->
     <footer class="footer footer-branded">
@@ -507,10 +622,28 @@
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
     <script src="scripts/bulma-collapsible.min.js"></script>
     <script type="text/javascript">
-      //Accordion plugin
+
+      //Initialize Accordion plugin
       bulmaCollapsible.attach();
 
-      //Select All unsub/sub - unsub/sub values are uniform for each radio set
+      
+      $('.tag').click(function(e){
+          // Sorting filters 
+          var selected = $(this).is('.selected')
+          if (selected == false){
+            $(this).addClass("selected")
+            $(this).closest("a").siblings().find(".tag").removeClass("selected")
+          }
+
+          //Hide and show correct accordion element (demo)
+          $('.bulma-accordion').hide();
+          var accordion_id = '#accordion_' + $(this).closest("a").attr('id')
+          $(accordion_id).show();
+      });
+      
+
+
+      //Select All unsub/sub values are uniform for each radio set
       $('.pub-list li').on('change', 'input', function (e) {
           var select_all = $(this).closest('li').is(':last-child')
           if (select_all == true){
@@ -522,7 +655,7 @@
           }
       });
 
-      //Prevent default form submission functionality for demo purposes
+      //Prevent default form submission functionality for (demo)
       $("form button").click(function(e) {
         e.preventDefault();
         $('#manage-prefs').hide();
