@@ -198,6 +198,7 @@ input[type="radio"]:checked+label {
   border-radius: 0;
   font-size: 16px;
   border-bottom: 1px solid #CCCCCC;
+  color:  #333333;
 
 }
 .bulma-accordion .message-header{
@@ -210,6 +211,7 @@ input[type="radio"]:checked+label {
 .bulma-accordion .message-body{
   border-radius: 0;
   border: 0;
+  color:  #333333;
 }
 .bulma-accordion a{
   text-decoration: none;
@@ -217,8 +219,10 @@ input[type="radio"]:checked+label {
 .bulma-accordion a:hover{
   opacity: initial;
 }
-
-
+.bulma-accordion .message-header,
+.bulma-accordion .is-collapsible.message-body .message-body-content{
+  padding:  .75em;
+}
 .bulma-accordion .message a:not(.button):not(.tag):not(.dropdown-item) {
     text-decoration: none;
 }
@@ -228,6 +232,18 @@ input[type="radio"]:checked+label {
 }
 .bulma-accordion .message .is-active .level img{
   transform: initial;
+}
+.message-body-content .pub-list p, .message-body-content .pub-list label{
+  font-size: 14px;
+}
+
+.message-body-content .pub-list .pub-title{
+  font-size: 16px;
+  margin-bottom: 5px;
+}
+
+.message-body-content ul.pub-list li{
+  margin: 0 0 10px 0;
 }
 
 @media (max-width: 768px) {
@@ -289,5 +305,8 @@ input[type="radio"]:checked+label {
 
   .bulma-accordion .message-header .level-left{
   width: 60%;
+  }
+  .message-body-content ul.pub-list li{
+  margin: 0 0 15px 0;
 }
 }
