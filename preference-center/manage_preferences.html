@@ -15,27 +15,27 @@
         <img src="https://image.e.tufts.edu/lib/fe8f1372756d067571/m/1/3a59ab11-2163-4246-9ae8-10a6b9ad8772.png" alt="Tufts Logo">
       </header>
       <!-- Begin page content -->
+      <form>
       <main role="main" id="manage-prefs">
         <div class="container">
           <div class="columns">
             <div class="column">
               <h1 class="mt-5 mb-2">Your Tufts Communication Preferences</h1>
               <p class="mb-5">Right now, <span style="color:#3E8EDE;">email@example.com</span> receiving the following updates from Cummings School of Veterinary Medicine</span>.</p>
-              <form>
                 <div class="field">
                   <ul class="pub-list">
                     <li>
                       <p class="pub-title">Announcements from Cummings School of Veterinary Medicine</p>
                       <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
                       <div class="form-check">
-                        <input type="radio" name="announcements-cummings" id="pub1-sub" value="subscribe" checked>
-                        <label for="pub1-sub">
+                        <input type="radio" name="announcements-cummings" id="announcements-cummings-sub" value="sub" checked>
+                        <label for="announcements-cummings-sub">
                         Subscribe
                         </label>
                       </div>
                       <div class="form-check">
-                        <input type="radio" name="announcements-cummings" id="pub1-unsub" value="unsubscribe">
-                        <label for="pub1-unsub">
+                        <input type="radio" name="announcements-cummings" id="announcements-cummings-unsub" value="unsub">
+                        <label for="announcements-cummings-unsub">
                         Unsubscribe
                         </label>
                       </div>
@@ -45,12 +45,12 @@
                 <div class="field">
                   <button type="submit" class="button mt-3">Update my preferences</button>
                 </div>
-              </form>
               <p class="mt-3"><a href="#" style="text-decoration:underline;">Update ALL Cummings email preferences</a></p>
             </div>
           </div>
         </div>
       </main>
+      </form>
       <main role="main" id="saved-prefs" style="display:none;">
         <div class="container">
           <div class="columns">
@@ -70,6 +70,7 @@
           </div>
         </div>
       </main>
+
     </div>
       <footer class="footer footer-branded">
         <div class="container">

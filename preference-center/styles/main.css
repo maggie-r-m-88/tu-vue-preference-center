@@ -54,6 +54,7 @@ main {
   color: #FFF;
   font-size: 16px;
   padding: 50px 0;
+  margin-top: 40px;
 }
 
 /*
@@ -199,6 +200,7 @@ input[type="radio"]:checked+label {
   font-size: 16px;
   border-bottom: 1px solid #CCCCCC;
   color:  #333333;
+  margin-bottom: 0.5rem;
 
 }
 .bulma-accordion .message-header{
@@ -302,11 +304,27 @@ input[type="radio"]:checked+label {
     font-size: 14px;
     line-height: 17px;
   }
-
+  .bulma-accordion .message{
+    margin-bottom: 0;
+  }
+  .bulma-accordion .message-header{
+    padding: .5em;
+  }
   .bulma-accordion .message-header .level-left{
-  width: 60%;
+  width: 75%;
   }
   .message-body-content ul.pub-list li{
   margin: 0 0 15px 0;
-}
+  }
+  .footer-form{
+    padding: 0 20px;
+    bottom: 0;
+    position: fixed;
+    z-index: 1000;
+    width: 100%;
+    background: -moz-linear-gradient(top,  rgba(255,255,255,0.85) 0%, rgba(255,255,255,1) 30%, rgba(255,255,255,1) 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top,  rgba(255,255,255,0.85) 0%,rgba(255,255,255,1) 30%,rgba(255,255,255,1) 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom,  rgba(255,255,255,0.85) 0%,rgba(255,255,255,1) 30%,rgba(255,255,255,1) 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+
+  }
 }
