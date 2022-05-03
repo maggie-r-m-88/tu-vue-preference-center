@@ -1,0 +1,805 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tufts University</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <link rel="stylesheet" href="styles/bulma-collapsible.min.css">
+    <!-- Custom styles for this template -->
+    <link href="styles/main.css" rel="stylesheet">
+    <style>
+      @media (max-width: 768px) {
+        .footer-branded{
+          display: none;
+        }
+      }
+    </style>
+  </head>
+  <body class="is-fullheight-100vh">
+    <div class="wrapper">
+      <header class="column">
+        <img src="https://image.e.tufts.edu/lib/fe8f1372756d067571/m/1/3a59ab11-2163-4246-9ae8-10a6b9ad8772.png" alt="Tufts Logo">
+      </header>
+      <!-- Begin page content -->
+      <form>
+        <main role="main" id="manage-prefs">
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <h1 class="mt-5 mb-2">Please select which emails are most relevant to you</h1>
+                <p class="mt-4 tags">
+                  Sort by <a href="#" id="unit"><span class="tag is-large selected">Unit</span></a> 
+                  <a href="#" id="category"><span class="tag is-large">Category</span></a>
+                </p>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column is-half">
+                <div id="accordion_unit" class="bulma-accordion">
+                  <article class="message">
+                    <a href="#cummings-school-veterinary-medicine" data-action="collapse">
+                      <div class="message-header level">
+                        <span class="level-left">Cummings School of Veterinary Medicine</span>
+                        <img src="images/carat-down.svg">
+                      </div>
+                    </a>
+                    <div id="cummings-school-veterinary-medicine" class="message-body is-collapsible" data-parent="accordion_unit">
+                      <div class="message-body-content">
+                        <ul class="pub-list">
+                          <li>
+                            <p class="pub-title">Special Announcements</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-announcements" id="cummings-announcements-sub" value="sub" checked>
+                              <label for="cummings-announcements-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-announcements" id="cummings-announcements-unsub" value="unsub">
+                              <label for="cummings-announcements-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Newsletters</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-newsletters" id="cummings-newsletters-sub" value="sub">
+                              <label for="cummings-newsletters-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-newsletters" id="cummings-newsletters-unsub" value="unsub">
+                              <label for="cummings-newsletters-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Gratitude</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-gratitude" id="cummings-gratitude-sub" value="sub">
+                              <label for="cummings-gratitude-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-gratitude" id="cummings-gratitude-unsub" value="unsub" checked>
+                              <label for="cummings-gratitude-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Giving Opportunities</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-giving" id="cummings-giving-sub" value="sub" checked>
+                              <label for="cummings-giving-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-giving" id="cummings-giving-unsub" value="unsub">
+                              <label for="cummings-giving-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Events</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-events" id="cummings-events-sub" value="sub" checked>
+                              <label for="cummings-events-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-events" id="cummings-events-unsub" value="unsub">
+                              <label for="cummings-events-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Set mailing preferences from ALL [unit] emails</p>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-all" id="cummings-all-sub" value="sub">
+                              <label for="cummings-all-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="cummings-all" id="cummings-all-unsub" value="unsub">
+                              <label for="cummings-all-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="message">
+                    <a href="#friedman-school-nutrition-science" data-action="collapse">
+                      <div class="message-header level">
+                        <span class="level-left">Friedman School of Nutrition Science and Policy</span>
+                        <img src="images/carat-down.svg">
+                      </div>
+                    </a>
+                    <div id="friedman-school-nutrition-science" class="message-body is-collapsible" data-parent="accordion_unit">
+                      <div class="message-body-content">
+                        <ul class="pub-list">
+                          <li>
+                            <p class="pub-title">Special Announcements</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="friedman-announcements" id="friedman-announcements-sub" value="sub" checked>
+                              <label for="friedman-announcements-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="friedman-announcements" id="friedman-announcements-unsub" value="unsub">
+                              <label for="friedman-announcements-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Newsletters</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="friedman-newsletters" id="friedman-newsletters-sub" value="sub">
+                              <label for="friedman-newsletters-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="friedman-newsletters" id="friedman-newsletters-unsub" value="unsub">
+                              <label for="friedman-newsletters-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Gratitude</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="friedman-gratitude" id="friedman-gratitude-sub" value="sub">
+                              <label for="friedman-gratitude-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="friedman-gratitude" id="friedman-gratitude-unsub" value="unsub" checked>
+                              <label for="friedman-gratitude-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Giving Opportunities</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="friedman-giving" id="friedman-giving-sub" value="sub" checked>
+                              <label for="friedman-gratitude-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="friedman-giving" id="friedman-giving-unsub" value="unsub">
+                              <label for="friedman-giving-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Events</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="friedman-events" id="friedman-events-sub" value="sub" checked>
+                              <label for="friedman-events-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="friedman-events" id="friedman-events-unsub" value="unsub">
+                              <label for="friedman-events-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Reunion</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="friedman-reunion" id="friedman-reunion-sub" value="sub" checked>
+                              <label for="friedman-reunion-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="friedman-reunion" id="friedman-reunion-unsub" value="unsub">
+                              <label for="friedman-reunion-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Set mailing preferences from ALL [unit] emails</p>
+                            <div class="form-check">
+                              <input type="radio" name="friedman-all" id="friedman-all-sub" value="sub">
+                              <label for="friedman-all-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="friedman-all" id="friedman-all-unsub" value="unsub">
+                              <label for="friedman-all-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="message">
+                    <a href="#graduate-school-biomedical-sciences" data-action="collapse">
+                      <div class="message-header level">
+                        <span class="level-left">Graduate School of Biomedical Sciences</span>
+                        <img src="images/carat-down.svg">
+                      </div>
+                    </a>
+                    <div id="graduate-school-biomedical-sciences" class="message-body is-collapsible" data-parent="accordion_unit">
+                      <div class="message-body-content">
+                        <ul class="pub-list">
+                          <li>
+                            <p class="pub-title">Special Announcements</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="graduate-school-biomedical-announcements" id="graduate-school-biomedical-announcements-sub" value="sub" checked>
+                              <label for="graduate-school-biomedical-announcements-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="graduate-school-biomedical-announcements" id="graduate-school-biomedical-announcements-unsub" value="unsub">
+                              <label for="graduate-school-biomedical-announcements-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Newsletters</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="graduate-school-biomedical-newsletters" id="graduate-school-biomedical-newsletters-sub" value="sub">
+                              <label for="graduate-school-biomedical-newsletters-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="graduate-school-biomedical-newsletters" id="graduate-school-biomedical-newsletters-unsub" value="unsub">
+                              <label for="graduate-school-biomedical-newsletters-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Gratitude</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="graduate-school-biomedical-gratitude" id="graduate-school-biomedical-gratitude-sub" value="sub">
+                              <label for="graduate-school-biomedical-gratitude-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="graduate-school-biomedical-gratitude" id="graduate-school-biomedical-gratitude-unsub" value="unsub" checked>
+                              <label for="graduate-school-biomedical-gratitude-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Giving Opportunities</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="graduate-school-biomedical-giving" id="graduate-school-biomedical-giving-sub" value="sub" checked>
+                              <label for="graduate-school-biomedical-giving-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="graduate-school-biomedical-giving" id="graduate-school-biomedical-giving-unsub" value="unsub">
+                              <label for="graduate-school-biomedical-giving-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Events</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="graduate-school-biomedical-events" id="graduate-school-biomedical-events-sub" value="sub">
+                              <label for="graduate-school-biomedical-events-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="graduate-school-biomedical-events" id="graduate-school-biomedical-events-unsub" value="unsub" checked>
+                              <label for="graduate-school-biomedical-events-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Volunteer Opportunities</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="graduate-school-biomedical-volunteer" id="graduate-school-biomedical-volunteer-sub" value="sub" checked>
+                              <label for="graduate-school-biomedical-volunteer-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="graduate-school-biomedical-volunteer" id="graduate-school-biomedical-volunteer-unsub" value="unsub">
+                              <label for="graduate-school-biomedical-volunteer-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Set mailing preferences from ALL [unit] emails</p>
+                            <div class="form-check">
+                              <input type="radio" name="graduate-school-biomedical-all" id="graduate-school-biomedical-all-sub" value="sub">
+                              <label for="graduate-school-biomedical-all-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="graduate-school-biomedical-all" id="graduate-school-biomedical-all-unsub" value="unsub">
+                              <label for="graduate-school-biomedical-all-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="message">
+                    <a href="#institute-global-leadership" data-action="collapse">
+                      <div class="message-header level">
+                        <span class="level-left">Institute of Global Leadership</span>
+                        <img src="images/carat-down.svg">
+                      </div>
+                    </a>
+                    <div id="institute-global-leadership" class="message-body is-collapsible" data-parent="accordion_unit">
+                      <div class="message-body-content">
+                        <ul class="pub-list">
+                          <li>
+                            <p class="pub-title">Special Announcements</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="institute-global-leadership-announcements" id="institute-global-leadership-announcements-sub" value="sub">
+                              <label for="institute-global-leadership-announcements-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="institute-global-leadership-announcements" id="institute-global-leadership-announcements-unsub" value="unsub">
+                              <label for="institute-global-leadership-announcements-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Giving Opportunities</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="institute-global-leadership-giving" id="institute-global-leadership-giving-sub" value="sub">
+                              <label for="institute-global-leadership-giving-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="institute-global-leadership-giving" id="institute-global-leadership-giving-unsub" value="unsub">
+                              <label for="institute-global-leadership-giving-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Set mailing preferences from ALL [unit] emails</p>
+                            <div class="form-check">
+                              <input type="radio" name="institute-global-leadership-all" id="institute-global-leadership-all-sub" value="sub">
+                              <label for="institute-global-leadership-all-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="institute-global-leadership-all" id="institute-global-leadership-all-unsub" value="unsub">
+                              <label for="institute-global-leadership-all-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="message">
+                    <a href="#office-alumni-engagement" data-action="collapse">
+                      <div class="message-header level">
+                        <span class="level-left">Office of Alumni Engagement</span>
+                        <img src="images/carat-down.svg">
+                      </div>
+                    </a>
+                    <div id="office-alumni-engagement" class="message-body is-collapsible" data-parent="accordion_unit">
+                      <div class="message-body-content">
+                        <ul class="pub-list">
+                          <li>
+                            <p class="pub-title">Special Announcements</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="office-alumni-engagement-announcements" id="office-alumni-engagement-announcements-sub" value="sub" checked>
+                              <label for="office-alumni-engagement-announcements-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="office-alumni-engagement-announcements" id="office-alumni-engagement-announcements-unsub" value="unsub">
+                              <label for="office-alumni-engagement-announcements-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Newsletters</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="office-alumni-engagement-newsletters" id="office-alumni-engagement-newsletters-sub" value="sub">
+                              <label for="office-alumni-engagement-newsletters-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="office-alumni-engagement-newsletters" id="office-alumni-engagement-newsletters-unsub" value="unsub">
+                              <label for="office-alumni-engagement-newsletters-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Events</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="office-alumni-engagement-events" id="office-alumni-engagement-events-sub" value="sub">
+                              <label for="office-alumni-engagement-events-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="office-alumni-engagement-events" id="office-alumni-engagement-events-unsub" value="unsub" checked>
+                              <label for="office-alumni-engagement-events-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Volunteer Opportunities</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="graduate-school-biomedical-volunteer" id="graduate-school-biomedical-volunteer-sub" value="sub" checked>
+                              <label for="graduate-school-biomedical-volunteer-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="graduate-school-biomedical-volunteer" id="graduate-school-biomedical-volunteer-unsub" value="unsub">
+                              <label for="graduate-school-biomedical-volunteer-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Set mailing preferences from ALL [unit] emails</p>
+                            <div class="form-check">
+                              <input type="radio" name="graduate-school-biomedical-all" id="graduate-school-biomedical-all-sub" value="sub">
+                              <label for="graduate-school-biomedical-all-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="graduate-school-biomedical-all" id="graduate-school-biomedical-all-unsub" value="unsub">
+                              <label for="graduate-school-biomedical-all-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+                <div id="accordion_category" class="bulma-accordion" style="display:none;">
+                  <article class="message">
+                    <a href="#events" data-action="collapse">
+                      <div class="message-header level">
+                        <span class="level-left">Events</span>
+                        <img src="images/carat-down.svg">
+                      </div>
+                    </a>
+                    <div id="events" class="message-body is-collapsible" data-parent="accordion_category">
+                      <div class="message-body-content">
+                        <ul class="pub-list">
+                          <li>
+                            <p class="pub-title">Cummings School of Veterinary Medicine</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="events-cummings" id="events-cummings-sub" value="sub" checked>
+                              <label for="events-cummings-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="events-cummings" id="events-cummings-unsub" value="unsub">
+                              <label for="events-cummings-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Office of Alumni Engagement</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="events-alumni-engagement" id="events-alumni-engagement-sub" value="sub" checked>
+                              <label for="events-alumni-engagement-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="events-alumni-engagement" id="events-alumni-engagement-unsub" value="unsub">
+                              <label for="events-alumni-engagement-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Set mailing preferences from ALL [category] emails</p>
+                            <div class="form-check">
+                              <input type="radio" name="events-all" id="events-all-sub" value="sub">
+                              <label for="events-all-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="events-all" id="events-all-unsub" value="unsub">
+                              <label for="events-all-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="message">
+                    <a href="#giving" data-action="collapse">
+                      <div class="message-header level">
+                        <span class="level-left">Giving Opportunities</span>
+                        <img src="images/carat-down.svg">
+                      </div>
+                    </a>
+                    <div id="giving" class="message-body is-collapsible" data-parent="accordion_category">
+                      <div class="message-body-content">
+                        <ul class="pub-list">
+                          <li>
+                            <p class="pub-title">Tufts University Athletics</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="giving-athletics" id="giving-athletics-sub" value="sub" checked>
+                              <label for="giving-athletics-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="giving-athletics" id="giving-athletics-unsub" value="unsub">
+                              <label for="giving-athletics-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Tufts Annual Giving</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="giving-annual" id="giving-annual-sub" value="sub">
+                              <label for="giving-annual-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="giving-annual" id="giving-annual-unsub" value="unsub">
+                              <label for="giving-annual-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                          <li>
+                            <p class="pub-title">Set mailing preferences from ALL [category] emails</p>
+                            <div class="form-check">
+                              <input type="radio" name="giving-all" id="giving-all-sub" value="sub">
+                              <label for="giving-all-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="giving-all" id="giving-all-unsub" value="unsub">
+                              <label for="giving-all-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+                  <article class="message">
+                    <a href="#gratitude" data-action="collapse">
+                      <div class="message-header level">
+                        <span class="level-left">Gratitude</span>
+                        <img src="images/carat-down.svg">
+                      </div>
+                    </a>
+                    <div id="gratitude" class="message-body is-collapsible" data-parent="accordion_category">
+                      <div class="message-body-content">
+                        <ul class="pub-list">
+                          <li>
+                            <p class="pub-title">Tufts Hillel</p>
+                            <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                            <div class="form-check">
+                              <input type="radio" name="gratitude-hillel" id="gratitude-hillel-sub" value="sub" checked>
+                              <label for="gratitude-hillel-sub">
+                              Subscribe
+                              </label>
+                            </div>
+                            <div class="form-check">
+                              <input type="radio" name="gratitude-hillel" id="gratitude-hillel-unsub" value="unsub">
+                              <label for="gratitude-hillel-unsub">
+                              Unsubscribe
+                              </label>
+                            </div>
+                          </li>
+
+                        </ul>
+                      </div>
+                    </div>
+                  </article>
+                </div>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <main role="main" id="saved-prefs" style="display:none;">
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <h1 class="mt-5 mb-2">Your preferences have been saved.</h1>
+                <p class="mb-4"><span style="color:#3E8EDE;">email@example.com</span> is <b>subscribed</b> to the following publications:</p>
+                <ul>
+                  <li>Announcements - Cummings School of Veterinary Medicine</li>
+                  <li>[Dynamic text Lorem ipsum]</li>
+                  <li>[Dynamic text Lorem ipsum]</li>
+                </ul>
+                <p class="mt-4 mb-4">And <b>unsubscribed</b> from the following publications:</p>
+                <ul>
+                  <li>Announcements - Cummings School of Veterinary Medicine</li>
+                  <li>[Dynamic text Lorem ipsum]</li>
+                  <li>[Dynamic text Lorem ipsum]</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </main>
+
+        <section class="footer-form">
+            <div class="container">
+                <div class="columns">
+                  <div class="column">
+                    <div class="field">
+                        <button type="submit" class="button mt-4">Update my preferences</button>
+                        <p class="mt-4 pb-3"><a href="#" style="text-decoration:underline;">I'd like to unsub from ALL Tufts emails</a></p>
+                    </div>
+                  </div>
+                </div>
+            </div>
+        </section>
+   </form>
+
+    </div><!-- // Wrapper -->
+    <footer class="footer footer-branded">
+      <div class="container">
+        <p class="has-text-center-mobile">&copy; Tufts University 2022</p>
+      </div>
+    </footer>
+    
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="scripts/bulma-collapsible.min.js"></script>
+    <script type="text/javascript">
+
+      //Initialize Accordion plugin
+      bulmaCollapsible.attach();
+
+      
+      $('.tag').click(function(e){
+          // Sorting filters 
+          var selected = $(this).is('.selected')
+          if (selected == false){
+            $(this).addClass("selected")
+            $(this).closest("a").siblings().find(".tag").removeClass("selected")
+          }
+
+          //Hide and show correct accordion element (demo)
+          $('.bulma-accordion').hide();
+          var accordion_id = '#accordion_' + $(this).closest("a").attr('id')
+          $(accordion_id).show();
+      });
+      
+
+
+      //Select All unsub/sub values are uniform for each radio set
+      $('.pub-list li').on('change', 'input', function (e) {
+          var select_all = $(this).closest('li').is(':last-child')
+          if (select_all == true){
+              var selected_value = "input[value='" + $(this).val() + "']"
+              $(this).closest('li').siblings().find(selected_value).prop('checked', true);
+          } 
+          else{
+              $(this).closest('li').siblings(":last").find("input").prop('checked', false);
+          }
+      });
+
+      //Prevent default form submission functionality for (demo)
+      $("form button").click(function(e) {
+        e.preventDefault();
+        $('#manage-prefs').hide();
+        
+        $('#saved-prefs').show();
+        $('.footer-form').hide()
+        $('.footer-branded').show()
+      });
+    </script>
+  </body>
+</html>

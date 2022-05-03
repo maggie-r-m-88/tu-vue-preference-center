@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tufts University</title>
+    <!-- Bulma core CSS -->
+    <link rel="stylesheet" href="https://pages.communications.tufts.edu/bulma_min_css">
+    <link href="https://pages.communications.tufts.edu/da_prefs_styles" rel="stylesheet">
+  </head>
+  <body>
+  <div class="wrapper">
+    <header class="column">
+      <img src="https://image.e.tufts.edu/lib/fe8f1372756d067571/m/1/7ebcd39c-d7e8-4a44-864b-faa638b220ea.png" alt="Tufts University Logo">
+    </header>
+    <!-- Begin page content -->
+    <form>
+      <main role="main" id="manage-prefs">
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <h1 class="mt-5 mb-2">We’re sorry to see you go. Please confirm your email address to unsubscribe.</h1>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column is-one-quarter-desktop">
+              <div class="field">
+                <div class="control" style="margin-right: 20px;">
+                  <input class="input" type="text" placeholder="lastname_firstname@tufts.edu" name="unsubscribe_all">
+                </div>
+                <p class="error pt-3" style="display:none;">Sorry. The email you entered is not showing in our record. Please re-enter your email.</p>
+              </div>
+            </div>
+          </div>
+          <div class="columns">
+            <div class="column">
+              <div class="field">
+                <button type="submit" class="button mt-3">Unsubscribe from all emails</button>
+              </div>
+              <p class="mt-3"><a href="https://pages.communications.tufts.edu/da_manage_prefs_all" style="text-decoration:underline;">Return to email preference customization</a></p>
+            </div>
+          </div>
+        </div>
+      </main>
+    </form>
+    <form>
+      <main role="main" id="saved-unsub" style="display:none;">
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <h1 class="mt-5 mb-2">You will no longer receive email communications from Tufts University.</h1>
+              <p class="pt-2 mb-5"><a href="#" style="text-decoration:underline;">If you changed your mind, click here to resubscribe.</a></p>
+              <section>
+                <h2>Would you please tell us why you chose to unsubscribe?</h2>
+                <p class="pt-3 mb-3">Check all the boxes that apply. Required*</p>
+                <div class="check-field">
+                  <label class="b-checkbox checkbox">
+                  <input type="checkbox" value="I no longer want to receive emails" name="unsub-reason">
+                  <span class="check"></span>
+                  <span class="control-label">I no longer want to receive emails</span>
+                  </label>
+                </div>
+                <div class="check-field">
+                  <label class="b-checkbox checkbox">
+                  <input type="checkbox" value="I never signed up for the emails" name="unsub-reason">
+                  <span class="check"></span>
+                  <span class="control-label">I never signed up for the emails</span>
+                  </label>
+                </div>
+                <div class="check-field">
+                  <label class="b-checkbox checkbox">
+                  <input type="checkbox" value="Too many emails" name="unsub-reason">
+                  <span class="check"></span>
+                  <span class="control-label">Too many emails</span>
+                  </label>
+                </div>
+                <div class="check-field">
+                  <label class="b-checkbox checkbox">
+                  <input type="checkbox" value="Content is irrelevant" name="unsub-reason">
+                  <span class="check"></span>
+                  <span class="control-label">Content is irrelevant</span>
+                  </label>
+                </div>
+                <div class="check-field">
+                  <label class="b-checkbox checkbox">
+                  <input type="checkbox" value="Other reasons" name="unsub-reason">
+                  <span class="check"></span>
+                  <span class="control-label">Other reasons</span>
+                  </label>
+                </div>
+                <div class="field">
+                  <button type="submit" class="button mt-3">Submit Survey</button>
+                </div>
+                <p class="error pt-3" style="display:none;">Please check at least one box.</p>
+              </section>
+            </div>
+          </div>
+        </div>
+      </main>
+      <main role="main" id="saved-survey" style="display:none;">
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <h1 class="mt-5 mb-2">Thank you for your feedback. It will help us continue to improve our communications.</h1>
+            </div>
+          </div>
+        </div>
+      </main>
+    </form>
+  </div>
+  <footer class="footer footer-branded">
+    <div class="container">
+      <p class="has-text-center-mobile">&copy; Tufts University 2022</p>
+    </div>
+  </footer>
+  <script src="https://pages.communications.tufts.edu/jquery-3-2-1-slim"></script>
+  <script type="text/javascript">
+  $( document ).ready(function() {
+      $("#manage-prefs button").click(function(e) {
+        //Prevent default form submission functionality (demo)
+        e.preventDefault();
+        var email_address = $("form input[type=text]").val()
+        if (email_address !== "lastname_firstname@tufts.edu"){
+         $("#manage-prefs .error").show();
+        }
+        else{
+          $('#manage-prefs .error').hide();
+          $('#manage-prefs').hide();
+          $('#saved-unsub').show();
+        }
+      });
+
+      $("#saved-unsub button").click(function(e) {
+        //Prevent default form submission functionality (demo)
+        e.preventDefault();
+        var selected_checks = $("input[type=checkbox]:checked").length
+        if (selected_checks < 1){
+          $(".error").show()
+        }
+        else{
+          $(".error").hide()
+          $("#saved-unsub").hide()
+          $("#saved-survey").show()
+        }
+      });
+
+      // Remove error once checkbox is selected
+      $('#saved-unsub').on('change', 'input', function (e) {
+          var selected_checks = $("input[type=checkbox]:checked").length
+          if (selected_checks > 0){
+            $(".error").hide()
+          }
+      });
+  });
+  </script>
+  </body>
+</html>

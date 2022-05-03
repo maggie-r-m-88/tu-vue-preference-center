@@ -1,0 +1,158 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tufts University</title>
+    <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="https://pages.communications.tufts.edu/bulma_min_css">
+    <link href="https://pages.communications.tufts.edu/da_prefs_styles" rel="stylesheet">
+  </head>
+  <body>
+  <div class="wrapper">
+    <header class="column">
+      <img src="https://image.e.tufts.edu/lib/fe8f1372756d067571/m/1/7ebcd39c-d7e8-4a44-864b-faa638b220ea.png" alt="Tufts University Logo">
+    </header>
+    <!-- Begin page content -->
+    <form>
+      <main role="main" id="manage-prefs">
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <h1 class="mt-5 mb-5">Update your Cummings School of Veterinary Medicine email preferences</h1>
+              <div class="field">
+                <ul class="pub-list">
+                  <li>
+                    <p class="pub-title">Appeals</p>
+                    <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                    <div class="radio-field">
+                      <input type="radio" name="cummings-appeals" id="cummings-appeals-sub" value="sub" checked>
+                      <label for="cummings-appeals-sub">
+                      Subscribe
+                      </label>
+                    </div>
+                    <div class="radio-field">
+                      <input type="radio" name="cummings-appeals" id="cummings-appeals-unsub" value="unsub">
+                      <label for="cummings-appeals-unsub">
+                      Unsubscribe
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <p class="pub-title">Newsletter</p>
+                    <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                    <div class="radio-field">
+                      <input type="radio" name="cummings-newsletter" id="cummings-newsletter-sub" value="sub" checked>
+                      <label for="cummings-newsletter-sub">
+                      Subscribe
+                      </label>
+                    </div>
+                    <div class="radio-field">
+                      <input type="radio" name="cummings-newsletter" id="cummings-newsletter-unsub" value="unsub">
+                      <label for="cummings-newsletter-unsub">
+                      Unsubscribe
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <p class="pub-title">Reunion</p>
+                    <p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>
+                    <div class="radio-field">
+                      <input type="radio" name="cummings-reunion" id="cummings-reunion-sub" value="sub" checked>
+                      <label for="cummings-reunion-sub">
+                      Subscribe
+                      </label>
+                    </div>
+                    <div class="radio-field">
+                      <input type="radio" name="cummings-reunion" id="cummings-reunion-unsub" value="unsub">
+                      <label for="cummings-reunion-unsub">
+                      Unsubscribe
+                      </label>
+                    </div>
+                  </li>
+                  <li>
+                    <p class="pub-title">Change preferences for all emails from Cummings School of Veterinary Medicine</p>
+                    <div class="radio-field">
+                      <input type="radio" name="cummings-all" id="cummings-all-sub" value="sub" >
+                      <label for="cummings-all-sub">
+                      Subscribe
+                      </label>
+                    </div>
+                    <div class="radio-field">
+                      <input type="radio" name="cummings-all" id="cummings-all-unsub" value="unsub">
+                      <label for="cummings-all-unsub">
+                      Unsubscribe
+                      </label>
+                    </div>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </main>
+      <section class="footer-form">
+        <div class="container">
+          <div class="columns">
+            <div class="column">
+              <div class="field">
+                <button type="submit" class="button mt-4">Update my preferences</button>
+                <p class="mt-4 pb-3"><a href="https://pages.communications.tufts.edu/da_manage_prefs_all" style="text-decoration:underline;">Update additional Tufts University email preferences</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </form>
+    <main role="main" id="saved-prefs" style="display:none;">
+      <div class="container">
+        <div class="columns">
+          <div class="column">
+            <h1 class="mt-5 mb-2">Your preferences have been saved.</h1>
+            <p class="mb-4"><span style="color:#3E8EDE;">email@example.com</span> is currently <b>unsubscribed</b> to</span></p>
+            <ul>
+              <li>Appeals - Cummings School of Veterinary Medicine</li>
+              <li>Reunion - Cummings School of Veterinary Medicine</li>
+            </ul>
+            <section>
+              <h2>Want to review and update more email preferences from Tufts University?</h2>
+              <a href="https://pages.communications.tufts.edu/da_manage_prefs_all"><button type="submit" class="button mt-3">Yes, take me there</button></a>
+            </section>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="footer footer-branded is-hidden-mobile">
+    <div class="container">
+      <p class="has-text-centered">&copy; Tufts University 2022</p>
+    </div>
+  </footer>
+  <script src="https://pages.communications.tufts.edu/jquery-3-2-1-slim"></script>
+  <script type="text/javascript">
+    $(document).ready(function() {
+
+       //Select All unsub/sub values are uniform for each radio set
+       $('.pub-list li').on('change', 'input', function(e) {
+          var select_all = $(this).closest('li').is(':last-child')
+          if (select_all == true) {
+             var selected_value = "input[value='" + $(this).val() + "']"
+             $(this).closest('li').siblings().find(selected_value).prop('checked', true);
+          } else {
+             $(this).closest('li').siblings(":last").find("input").prop('checked', false);
+          }
+       });
+
+       //Prevent default form submission functionality for (demo)
+       $("form button").click(function(e) {
+          e.preventDefault();
+          $('#manage-prefs').hide();
+          $('#saved-prefs').show();
+          $('.footer-form').hide()
+          $('.footer-branded').removeClass("is-hidden-mobile")
+       });
+
+    });
+  </script>
+  </body>
+</html>

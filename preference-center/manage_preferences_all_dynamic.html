@@ -1,0 +1,212 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Tufts University</title>
+    <!-- Bulma core CSS -->
+    <link rel="stylesheet" href="https://pages.communications.tufts.edu/bulma_min_css">
+    <link rel="stylesheet" href="https://pages.communications.tufts.edu/bulma-collapsible-min-css">
+    <link href="https://pages.communications.tufts.edu/da_prefs_styles" rel="stylesheet">
+  </head>
+  <body class="is-fullheight-100vh">
+  <script runat="server">
+ Platform.Load("core", "1.1");
+
+function removeDuplicates(originalArray, prop) {
+    var newArray = [];
+    var lookupObject = {};
+    for (var i in originalArray) {
+        lookupObject[originalArray[i][prop]] = originalArray[i];
+    }
+    for (i in lookupObject) {
+        newArray.push(lookupObject[i]);
+    }
+    return newArray;
+}
+
+function buildAccordion(category_key,subcategory_key) {
+    var accordion_id = "accordion_" + category_key.toLowerCase()
+    var categories = ListOfPublicationsDE.Rows.Retrieve();
+    categories = removeDuplicates(categories, category_key);
+    if (categories.length > 0) {
+        for (var i in categories) {
+            var category_name = categories[i][category_key]
+            var category_string = category_name.toLowerCase().replace(/\s+/g, '-');
+            var accordion_output = "<article class='message'>"
+            accordion_output += "<a href='#" + category_string + "' data-action='collapse'>"
+            accordion_output += "<div class='message-header level'>"
+            accordion_output += "<span class='level-left'>" + category_name + "</span><img src='https://image.e.tufts.edu/lib/fe8f1372756d067571/m/1/610388f9-51ac-4666-8de6-218e3c2e5ac8.svg'></div></a>"
+            accordion_output += "<div id='" + category_string + "' class='message-body is-collapsible' data-parent='" + accordion_id + "'><div class='message-body-content'><ul class='pub-list'>"
+            var subcat_filter = {
+                Property: category_key,
+                SimpleOperator: "equals",
+                Value: category_name
+            };
+            var subcategories = ListOfPublicationsDE.Rows.Retrieve(subcat_filter);
+            subcategories = removeDuplicates(subcategories, subcategory_key);
+            if (subcategories.length > 0) {
+                for (var j in subcategories) {
+                    // Naming conventions for input names for each subcategory for (demo)
+                    var subcategory_name = subcategories[j][subcategory_key]
+                    var subcategory_string = subcategory_name.toLowerCase().replace(/\s+/g, '-');
+                    var pub_name = category_string + "-" + subcategory_string
+                    var pub_unsub = pub_name + "-unsub"
+                    var pub_sub = pub_name + "-sub"
+                    accordion_output += "<li><p class='pub-title'>" + subcategory_name + "</p>"
+                    accordion_output += "<p>[Dynamic text Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent vestibulu]</p>"
+                    accordion_output += "<div class='form-check'>"
+                    accordion_output += "<input type='radio' name='" + pub_name + "' id='" + pub_sub + "' value='sub'><label for='" + pub_sub + "'> Subscribe</label></div>"
+                    accordion_output += "<div class='form-check'>"
+                    accordion_output += "<input type='radio' name='" + pub_name + "' id='" + pub_unsub + "' value='unsub'><label for='" + pub_unsub + "'> Unsubscribe</label></div>"
+                    accordion_output += "</li>"
+                }
+            }
+            accordion_output += "<li><p class='pub-title'>Set mailing preferences from ALL [" + category_name + "] emails</p>"
+            accordion_output += "<div class='form-check'>"
+            accordion_output += "<input type='radio' name='" + category_string + "-all' id='" + category_string + "-all-sub' value='sub'><label for='" + category_string + "-all-sub'> Subscribe</label></div>"
+            accordion_output += "<div class='form-check'>"
+            accordion_output += "<input type='radio' name='" + category_string + "-all' id='" + category_string + "-all-unsub' value='unsub'><label for='" + category_string + "-all-unsub'> Unubscribe</label></div>"
+            accordion_output += "</li></ul></div></div></article>"
+            Write(accordion_output);
+        }
+    }
+}
+   </script>
+    <div class="wrapper">
+      <header class="column">
+        <img src="https://image.e.tufts.edu/lib/fe8f1372756d067571/m/1/7ebcd39c-d7e8-4a44-864b-faa638b220ea.png" alt="Tufts University Logo">
+      </header>
+      <!-- Begin page content -->
+      <form>
+        <main role="main" id="manage-prefs">
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <h1 class="mt-5 mb-2">Your Communication Preferences</h1>
+                <p class="mt-4 tags">
+                  Sort by <a href="#" id="unit"><span class="tag is-large selected">Unit</span></a> 
+                  <a href="#" id="category"><span class="tag is-large">Category</span></a>
+                </p>
+              </div>
+            </div>
+            <div class="columns">
+              <div class="column is-half-desktop">
+                <div id="accordion_unit" class="bulma-accordion">
+                  <script runat="server">
+                    Platform.Load("core", "1.1");
+                    var ListOfPublicationsDE = DataExtension.Init("DA_PubList_Demo");
+                    try {
+                        buildAccordion("Unit", "Category");
+                        
+                    } catch (err) {}             
+                  </script>
+                </div>
+                <!-- // Unit Accordion -->
+                <div id="accordion_category" class="bulma-accordion" style="display:none;">
+                  <script runat="server">
+                    Platform.Load("core", "1.1");
+                    var ListOfPublicationsDE = DataExtension.Init("DA_PubList_Demo");
+                    var DE = "DA_PubList_Demo"
+                    try {
+                        buildAccordion("Category", "Unit");
+                        
+                    } catch (err) {}             
+                  </script>
+                </div>
+                <!-- // Category Accordion -->
+              </div>
+            </div>
+          </div>
+        </main>
+        <main role="main" id="saved-prefs" style="display:none;">
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <h1 class="mt-5 mb-2">Your preferences have been saved.</h1>
+                <p class="mb-4"><span style="color:#3E8EDE;">email@example.com</span> is <b>subscribed</b> to the following publications:</p>
+                <ul>
+                  <li>Announcements - Cummings School of Veterinary Medicine</li>
+                  <li>[Dynamic text Lorem ipsum]</li>
+                  <li>[Dynamic text Lorem ipsum]</li>
+                </ul>
+                <p class="mt-4 mb-4">And <b>unsubscribed</b> from the following publications:</p>
+                <ul>
+                  <li>Announcements - Cummings School of Veterinary Medicine</li>
+                  <li>[Dynamic text Lorem ipsum]</li>
+                  <li>[Dynamic text Lorem ipsum]</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </main>
+        <section class="footer-form">
+          <div class="container">
+            <div class="columns">
+              <div class="column">
+                <div class="field">
+                  <button type="submit" class="button mt-4">Update my preferences</button>
+                  <p class="mt-4 pb-3"><a href="https://pages.communications.tufts.edu/da_unsub_all" style="text-decoration:underline;">Unsubscribe from all Tufts University emails</a></p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </form>
+    </div>
+    <!-- // Wrapper -->
+    <footer class="footer footer-branded is-hidden-mobile">
+      <div class="container">
+        <p class="has-text-centered">&copy; Tufts University 2022</p>
+      </div>
+    </footer>
+    
+    <script src="https://pages.communications.tufts.edu/jquery-3-2-1-slim"></script>
+    <script src="https://pages.communications.tufts.edu/bulma-collapsible-min-js"></script>
+    
+    <script type="text/javascript">
+    $(document).ready(function() {
+       //Initialize Accordion plugin
+       bulmaCollapsible.attach();
+
+
+       $('.tag').click(function(e) {
+          // Sorting filters 
+          var selected = $(this).is('.selected')
+          if (selected == false) {
+             $(this).addClass("selected")
+             $(this).closest("a").siblings().find(".tag").removeClass("selected")
+          }
+
+          //Hide and show correct accordion element (demo)
+          $('.bulma-accordion').hide();
+          var accordion_id = '#accordion_' + $(this).closest("a").attr('id')
+          $(accordion_id).show();
+
+       });
+
+
+       //Select All unsub/sub values are uniform for each radio set
+       $('.pub-list li').on('change', 'input', function(e) {
+          var select_all = $(this).closest('li').is(':last-child')
+          if (select_all == true) {
+             var selected_value = "input[value='" + $(this).val() + "']"
+             $(this).closest('li').siblings().find(selected_value).prop('checked', true);
+          } else {
+             $(this).closest('li').siblings(":last").find("input").prop('checked', false);
+          }
+       });
+
+       //Prevent default form submission functionality for (demo)
+       $("form button").click(function(e) {
+          e.preventDefault();
+          $('#manage-prefs').hide();
+          $('#saved-prefs').show();
+          $('.footer-form').hide()
+          $('.footer-branded').removeClass("is-hidden-mobile")
+       });
+
+    });
+    </script>
+  </body>
+</html>
